@@ -7,7 +7,8 @@ This repository contains code for demos from my "Cloud Native Apps" presentation
 You must have the following downloaded and installed to run these demos:
 - [Microsoft Visual Studio 2019 (or later)](https://visualstudio.microsoft.com/) with the **ASP.NET and web development** workload installed
 - [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) for the AWS Demo
-- [Docker Desktop](https://www.docker.com/products/docker-desktop) for the Container Demo
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) for the Container Demo\
+Note: After installing Docker, you may be prompted to download and install the [WSL 2 Linux kernel](https://aka.ms/wsl2kernel).
 - [Postman](https://www.postman.com/downloads/)
 - The code from this repository
 

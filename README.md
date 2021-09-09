@@ -4,15 +4,19 @@ Repository: programmers-week-2021
 This repository contains code for demos from my "Cloud Native Apps" presentation at Cognizant Softvision Programmers' Week 2021.
 
 ## Getting Started
-You must have the following downloaded and installed to run these demos:
-- [Microsoft Visual Studio 2019 (or later)](https://visualstudio.microsoft.com/) with the **ASP.NET and web development** workload installed
-- [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) for the AWS Demo
-- [Docker Desktop](https://www.docker.com/products/docker-desktop) for the Container Demo\
-Note: After installing Docker, you may be prompted to download and install the [WSL 2 Linux kernel](https://aka.ms/wsl2kernel).
-- [Postman](https://www.postman.com/downloads/)
-- The code from this repository
+You must have the following downloaded and installed to build and run these demos:
 
-The code in this repository can be run locally or deployed to Amazon AWS and Microsoft Azure, respectively.
+| Prerequisite | AWS Lambda Demo | Container Demo |
+| ----------- | ----------- | ----------- |
+| Supported Platform(s) | Local or AWS | Local, AWS or Azure |
+| [Visual Studio 2019 (or later)](https://visualstudio.microsoft.com/)<br> ASP.NET and web development workload | Yes<br>Required | - |
+| [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) | Yes | - |
+| [Visual Studio Code](https://code.visualstudio.com/) | - | Yes |
+| [Docker Desktop](https://www.docker.com/products/docker-desktop) may also require [WSL 2 Linux kernel](https://aka.ms/wsl2kernel) | - | Yes |
+| [Postman](https://www.postman.com/downloads/) | Optional | - |
+| The code from this repository | Yes | Yes |
+
+The code in this repository can be run locally or deployed to Amazon AWS and/or Microsoft Azure, respectively.
 
 **Note: Deploying resources within Amazon AWS or Microsoft Azure can and will incur costs you will be liable for.**
 

@@ -6,7 +6,8 @@ This repository contains code for demos from my "Cloud Native Apps" presentation
 ## Getting Started
 You must have the following downloaded and installed to run these demos:
 - [Microsoft Visual Studio 2019 (or later)](https://visualstudio.microsoft.com/) with the **ASP.NET and web development** workload installed
-- [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) for the AWS Demos
+- [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) for the AWS Demo
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) for the Container Demo
 - [Postman](https://www.postman.com/downloads/)
 - The code from this repository
 
@@ -22,3 +23,6 @@ The API has two endpoints; both accept an image file to be processed by the [AWS
 **Requirements:** HTTP POST containing multipart/form-data. The image must be submitted in the form field named `file`.
 - **/api/labels/** - This endpoint uses the label detection feature of Rekognition to output a list of label(s) or tag(s) on whether the image is an object, scene, action, or concept.
 - **/api/celebrities/** - This endpoint uses the celebrity recognition feature of Rekognition to automatically recognize tens of thousands of well-known personalities in the image using machine learning.
+
+### Container Demo
+The **ContainerDemo** project makes use of Docker to containerize a Microsoft .NET Core based Web project.

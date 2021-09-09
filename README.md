@@ -16,7 +16,9 @@ The code in this repository can be run locally or deployed to Amazon AWS and Mic
 
 ## Demos
 ### AWS Lambda Demo
-The **AWSLambdaDemo** project makes use of the AWS Lambda serverless functions service host a Microsoft .NET Core based Web API project.
-The API has two endpoints; both accept an HTTP POST containing multipart/form-data to submit an image file to be processed by the AWS Rekognition Image service.  The image must be submitted in the form field named 'file'.
+The **AWSLambdaDemo** project makes use of [AWS Lambda](https://aws.amazon.com/lambda/) to host a serverless Microsoft .NET Core based Web API project.
+The API has two endpoints; both accept an image file to be processed by the [AWS Rekognition Image](https://aws.amazon.com/rekognition/) service. The Lambda function is fronted by [Amazon API Gateway](https://aws.amazon.com/api-gateway/) and deployed via CloudFormation using the *serverless.template* file.
+
+**Requirements:** HTTP POST containing multipart/form-data. The image must be submitted in the form field named `file`.
 - **/api/labels/** - This endpoint uses the label detection feature of Rekognition to output a list of label(s) or tag(s) on whether the image is an object, scene, action, or concept.
 - **/api/celebrities/** - This endpoint uses the celebrity recognition feature of Rekognition to automatically recognize tens of thousands of well-known personalities in the image using machine learning.

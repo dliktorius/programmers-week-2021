@@ -9,11 +9,14 @@ You must have the following downloaded and installed to build and run these demo
 | Prerequisite | AWS Lambda Demo | Container Demo |
 | ----------- | ----------- | ----------- |
 | Supported Platform(s) | Local or AWS | Local, AWS or Azure |
-| [Visual Studio 2019 (or later)](https://visualstudio.microsoft.com/)<br> ASP.NET and web development workload | Yes<br>Required | - |
+| [Visual Studio 2019 (or later)](https://visualstudio.microsoft.com/)<br>- ASP.NET and web development workload | Yes<br>Required | - |
+| [.NET SDK Version](https://dotnet.microsoft.com/download/) | 3.1 Core | - |
 | [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) | Yes | - |
+| [Postman](https://www.postman.com/downloads/) | Optional | - |
 | [Visual Studio Code](https://code.visualstudio.com/) | - | Yes |
 | [Docker Desktop](https://www.docker.com/products/docker-desktop) may also require [WSL 2 Linux kernel](https://aka.ms/wsl2kernel) | - | Yes |
-| [Postman](https://www.postman.com/downloads/) | Optional | - |
+| [VS Code Docker Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) | - | Yes |
+| [Node.js 10 (or later)](https://nodejs.org/) | - | Yes |
 | The code from this repository | Yes | Yes |
 
 The code in this repository can be run locally or deployed to Amazon AWS and/or Microsoft Azure, respectively.
@@ -30,4 +33,6 @@ The API has two endpoints; both accept an image file to be processed by the [AWS
 - **/api/celebrities/** - This endpoint uses the celebrity recognition feature of Rekognition to automatically recognize tens of thousands of well-known personalities in the image using machine learning.
 
 ### Container Demo
-The **ContainerDemo** project makes use of Docker to containerize a Microsoft .NET Core based Web project.
+The **ContainerDemo** project makes use of Docker to containerize a Node.js based Web API project.
+
+You may wish to review the [Quick Start Guide](https://code.visualstudio.com/docs/containers/quickstart-node) this demo was created from.

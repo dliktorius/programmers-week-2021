@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1=title
+  p=pageData.subTitle
+  form(method="POST", action="/")
+   p City
+    input(type="text", name="city")
+   p
+    input(type="submit")
+  if (pageData.displayMode == "results" )
+   h2 Results
+   p City: #{pageData.weatherData.name}
+   p Country: #{pageData.weatherData.sys.country}
+   p Temperature: #{pageData.weatherData.main.temp} F
+   p Description: #{pageData.weatherData.weather[0].description}
+   p Visibility: #{pageData.weatherData.visibility}
+   p Wind - Speed: #{pageData.weatherData.wind.speed}, Direction: #{pageData.weatherData.wind.deg}, Gust: #{pageData.weatherData.wind.gust}

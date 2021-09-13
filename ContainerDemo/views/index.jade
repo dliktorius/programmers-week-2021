@@ -2,12 +2,14 @@ extends layout
 
 block content
   h1=title
-  p=pageData.subTitle
+  p Enter a city name to retrieve current weather conditions.
   form(method="POST", action="/")
-   p City
+   p City:
     input(type="text", name="city")
    p
     input(type="submit")
+  if (pageData.displayMode == "notfound")
+   h2 Not a valid city name
   if (pageData.displayMode == "results" )
    h2 Results
    p City: #{pageData.weatherData.name}

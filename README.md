@@ -17,7 +17,9 @@ You must have the following downloaded and installed to build and run these demo
 | [Docker Desktop](https://www.docker.com/products/docker-desktop) may also require [WSL 2 Linux kernel](https://aka.ms/wsl2kernel) | - | Yes |
 | [VS Code Docker Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) | - | Yes |
 | [Node.js 10 (or later)](https://nodejs.org/) | - | Yes |
-| [PowerShell 7.1.4 (or later)(https://github.com/PowerShell/PowerShell/releases/latest) | - | Optional |
+| [PowerShell 7.1.4 (or later)](https://github.com/PowerShell/PowerShell/releases/latest) | - | Yes: Azure |
+| [AWS CLI v2 (or later)](https://docs.aws.amazon.com/cli/index.html) | - | Yes: AWS |
+| [AWS ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI.html) | - | Yes: AWS |
 | The code from this repository | Yes | Yes |
 
 The code in this repository can be run locally or deployed to Amazon AWS and/or Microsoft Azure, respectively.
@@ -34,8 +36,11 @@ The API has two endpoints; both accept an image file to be processed by the [AWS
 - **/api/celebrities/** - This endpoint uses the celebrity recognition feature of Rekognition to automatically recognize tens of thousands of well-known personalities in the image using machine learning.
 
 ### Container Demo
-The **ContainerDemo** project makes use of Docker to containerize a Node.js based Web API project.
+The **ContainerDemo** project makes use of Docker to containerize a Node.js Express framework based project.
+The project has a default form which prompts the user to enter a city name. Upon submitting the form, a call is made to the [OpenWeather API](https://openweathermap.org/) to retrieve the current weather conditions for the requested city.
 
 You may wish to review the [Quick Start Guide](https://code.visualstudio.com/docs/containers/quickstart-node) this demo was created from.
 
-To deploy the demo resources using the provided Azure ARM template, you can deploy them ysing the Azure Portal or with the included PowerShell script.  Note: PowprerShell v7.1 or later (7.1.4 was used for this demo) should be used and is the preferred major release of PowerShell recommended by Microsoft for Azure.
+To deploy the demo resources using the provided Azure ARM template, you can deploy them with the included PowerShell script `Azure\deploy.ps1`.  Note: PowprerShell v7.1 or later (7.1.4 was used for this demo) should be used and is the preferred major release of PowerShell recommended by Microsoft for Azure.
+
+**NOTE: An AWS deployment to ECS Fargate is forthcoming and this repository will be updated with it in the coming days.**
